@@ -14,11 +14,11 @@ export default function Letter3D({fref}) {
         offset:['start end', 'end start']
     })
     
-    const posY1 = useTransform(scrollYProgress,[0,1],[-200,700 ])
-    const posY2 = useTransform(scrollYProgress,[0,1],[-200,800 ])
-    const posY3 = useTransform(scrollYProgress,[0,1],[-200,950 ])
-    const posY4 = useTransform(scrollYProgress,[0,1],[-200,810 ])
-    const posY5 = useTransform(scrollYProgress,[0,1],[-200,890 ])
+    const posY1 = useTransform(scrollYProgress,[0,1],[-100,700 ])
+    const posY2 = useTransform(scrollYProgress,[0,1],[-250,800 ])
+    const posY3 = useTransform(scrollYProgress,[0,1],[-300,950 ])
+    const posY4 = useTransform(scrollYProgress,[0,1],[-100,810 ])
+    const posY5 = useTransform(scrollYProgress,[0,1],[-100,890 ])
     const rotY = useTransform(scrollYProgress,[0,1],[0,5])
     const rotX = useTransform(scrollYProgress,[0,1],[0,30])
     const rotZ = useTransform(scrollYProgress,[0,1],[0,5])
