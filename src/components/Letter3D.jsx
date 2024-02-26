@@ -38,7 +38,7 @@ export default function Letter3D({fref}) {
 }
 function Text3D({data,position,rotation}){
     const {geometry} = data;
-    const [matMat] = useMatcapTexture('161B1F_C7E0EC_90A5B3_7B8C9B')
+    const [matMat] = useMatcapTexture('525050_D4D3D3_959393_ACACAC')
     return (
         <motion.mesh
         
