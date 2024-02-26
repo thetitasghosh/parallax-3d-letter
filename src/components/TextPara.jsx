@@ -1,15 +1,15 @@
 import {Text} from "@react-three/drei"
+import { useThree} from "@react-three/fiber";
+
 
 
 const TextParagraph = () => {
 
-    const TextOptions = {
-
-    }
+    const {viewport} = useThree()
 
   return (
     <>
-      <Text position={[0,0,1]} fontSize={1.2} font="/Font/NeueRegradeBold.otf">
+      <Text position={[0,0,1]} fontSize={viewport.width / 12}  font="/Font/NeueRegradeBold.otf">
     Creative Developer
       </Text>
     </>

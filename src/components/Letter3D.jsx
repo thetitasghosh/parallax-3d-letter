@@ -3,17 +3,18 @@ import {useControls} from 'leva'
 import {useScroll,useTransform,useVelocity} from "framer-motion"
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useMatcapTexture } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useThree} from "@react-three/fiber";
 
 export default function Letter3D({fref}) {
   const { nodes } = useGLTF("/Assets/Titas3DText.glb");
+  const {viewport} = useThree()
   const group = useRef()
     const {scrollYProgress} = useScroll({
         target:fref,
         offset:['start end', 'end start']
     })
     
-    const posY = useTransform(scrollYProgress,[0,1],[-300,900 ])
+    const posY = useTransform(scrollYProgress,[0,1],[-200,900 ])
     const rotY = useTransform(scrollYProgress,[0,1],[0,5])
     const rotX = useTransform(scrollYProgress,[0,1],[0,30])
     const rotZ = useTransform(scrollYProgress,[0,1],[0,5])
@@ -23,10 +24,10 @@ export default function Letter3D({fref}) {
     //     ypos:{value:0,min:0,max:10},
     //     zpos:{value:0,min:0,max:10},
     // })
-  
+  console.log(viewport.width);
   return (
     <group  >
-      <group ref={group} scale={0.014} position={[1,-5,10]}  >
+      <group ref={group} scale={viewport.width * 0.0001} position={[1,-5,10]}  >
        <Text3D data={nodes.T1}  position={[-300,posY,0]} rotation={[rotX ,0,1.9]}  /> z : 1.9
        <Text3D data={nodes.I}  position={[-95.64,posY, 3.789]} rotation={[rotX,0,1.2]} />
        <Text3D data={nodes.T_2} position={[-500,posY, 15.789]} rotation={[rotX,0,1.8]} />
