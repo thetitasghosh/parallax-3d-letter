@@ -2,7 +2,7 @@ import {motion} from "framer-motion-3d"
 import {useControls} from 'leva'
 import {useScroll,useTransform,useVelocity} from "framer-motion"
 import React, { useEffect, useRef } from "react";
-import { useGLTF, useMatcapTexture } from "@react-three/drei";
+import { Float, useGLTF, useMatcapTexture } from "@react-three/drei";
 import { useThree} from "@react-three/fiber";
 
 export default function Letter3D({fref}) {
@@ -29,7 +29,7 @@ export default function Letter3D({fref}) {
     //     zpos:{value:0,min:0,max:10},
     // })
   return (
-    <group  >
+    <>
       <group ref={group} scale={0.014} position={[1,-5,10]}  >
        <Text3D data={nodes.T1}  position={[-300,posY5,0]} rotation={[rotX ,0,1.9]}  /> z : 1.9
        <Text3D data={nodes.I}  position={[-95.64,posY2, 3.789]} rotation={[rotX,0,1.2]} />
@@ -37,23 +37,22 @@ export default function Letter3D({fref}) {
        <Text3D data={nodes.A}   position={[119.391,posY4, 82.789]} rotation={[rotX,0,-1]} />
        <Text3D data={nodes.S} position={[379.899,posY3, 51.79]} rotation={[rotX,0,1]} />
       </group>
-    </group>
+    </>
   );
 }
 function Text3D({data,position,rotation}){
     const {geometry} = data;
     const [matMat] = useMatcapTexture('525050_D4D3D3_959393_ACACAC')
     return (
+      <Float>
         <motion.mesh
-        
         rotation={rotation}
         position={position}
         geometry={geometry}
-
-        // rotateOnAxis={[y,0.9]}
         >
-            <meshMatcapMaterial color="white" matcap={matMat}/>
+        <meshMatcapMaterial color="white" matcap={matMat}/>
         </motion.mesh>
+        </Float>
     )
 }
 
