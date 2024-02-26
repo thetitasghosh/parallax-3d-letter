@@ -24,10 +24,9 @@ export default function Letter3D({fref}) {
     //     ypos:{value:0,min:0,max:10},
     //     zpos:{value:0,min:0,max:10},
     // })
-  console.log(viewport.width);
   return (
     <group  >
-      <group ref={group} scale={viewport.width * 0.0001} position={[1,-5,10]}  >
+      <group ref={group} scale={0.014} position={[1,-5,10]}  >
        <Text3D data={nodes.T1}  position={[-300,posY,0]} rotation={[rotX ,0,1.9]}  /> z : 1.9
        <Text3D data={nodes.I}  position={[-95.64,posY, 3.789]} rotation={[rotX,0,1.2]} />
        <Text3D data={nodes.T_2} position={[-500,posY, 15.789]} rotation={[rotX,0,1.8]} />
