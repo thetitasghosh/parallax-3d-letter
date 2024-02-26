@@ -14,7 +14,11 @@ export default function Letter3D({fref}) {
         offset:['start end', 'end start']
     })
     
-    const posY = useTransform(scrollYProgress,[0,1],[-200,900 ])
+    const posY1 = useTransform(scrollYProgress,[0,1],[-200,700 ])
+    const posY2 = useTransform(scrollYProgress,[0,1],[-200,800 ])
+    const posY3 = useTransform(scrollYProgress,[0,1],[-200,950 ])
+    const posY4 = useTransform(scrollYProgress,[0,1],[-200,810 ])
+    const posY5 = useTransform(scrollYProgress,[0,1],[-200,890 ])
     const rotY = useTransform(scrollYProgress,[0,1],[0,5])
     const rotX = useTransform(scrollYProgress,[0,1],[0,30])
     const rotZ = useTransform(scrollYProgress,[0,1],[0,5])
@@ -27,11 +31,11 @@ export default function Letter3D({fref}) {
   return (
     <group  >
       <group ref={group} scale={0.014} position={[1,-5,10]}  >
-       <Text3D data={nodes.T1}  position={[-300,posY,0]} rotation={[rotX ,0,1.9]}  /> z : 1.9
-       <Text3D data={nodes.I}  position={[-95.64,posY, 3.789]} rotation={[rotX,0,1.2]} />
-       <Text3D data={nodes.T_2} position={[-500,posY, 15.789]} rotation={[rotX,0,1.8]} />
-       <Text3D data={nodes.A}   position={[119.391,posY, 82.789]} rotation={[rotX,0,-1]} />
-       <Text3D data={nodes.S} position={[379.899,posY, 51.79]} rotation={[rotX,0,1]} />
+       <Text3D data={nodes.T1}  position={[-300,posY5,0]} rotation={[rotX ,0,1.9]}  /> z : 1.9
+       <Text3D data={nodes.I}  position={[-95.64,posY2, 3.789]} rotation={[rotX,0,1.2]} />
+       <Text3D data={nodes.T_2} position={[-500,posY1, 15.789]} rotation={[rotX,0,1.8]} />
+       <Text3D data={nodes.A}   position={[119.391,posY4, 82.789]} rotation={[rotX,0,-1]} />
+       <Text3D data={nodes.S} position={[379.899,posY3, 51.79]} rotation={[rotX,0,1]} />
       </group>
     </group>
   );
