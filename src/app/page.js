@@ -37,7 +37,14 @@ export default function Home() {
         </div>
       </div>
       <Scene />
-      <div className={style.page2} />
+      <div className={style.page2} >
+        <h1>contact me ↲ </h1>
+        <h1 className="text-5xl italic">
+          <a href="mailto:info.titasghosh@gmail.com" target="_top">
+            info.titasghosh@gmail.com
+          </a>
+        </h1>
+      </div>
     </main>
   );
 }
