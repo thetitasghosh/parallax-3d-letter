@@ -1,5 +1,5 @@
 "use client";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 import { Canvas } from "@react-three/fiber";
 import { Text, OrbitControls, Environment } from "@react-three/drei";
 import React, { useRef } from "react";
