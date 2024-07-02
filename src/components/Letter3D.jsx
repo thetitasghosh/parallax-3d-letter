@@ -22,7 +22,7 @@ export default function Letter3D({fref}) {
     const rotY = useTransform(scrollYProgress,[0,1],[0,5])
     const rotX = useTransform(scrollYProgress,[0,1],[0,30])
     const rotZ = useTransform(scrollYProgress,[0,1],[0,5])
-    
+    console.log(viewport.width);
     // const {xpos,ypos,zpos} = useControls("rotation",{
     //     xpos:{value:0,min:0,max:10},
     //     ypos:{value:0,min:0,max:10},

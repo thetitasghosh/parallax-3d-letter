@@ -9,7 +9,7 @@ const TextParagraph = () => {
 
   return (
     <>
-      <Text position={[0,0,1]} fontSize={viewport.width / 11}  font="/Font/NeueRegradeBold.otf">
+      <Text position={[0,0,1]} fontSize={viewport.width / 10}  font="/Font/NeueRegradeBold.otf">
     Creative Developer
       </Text>
     </>
