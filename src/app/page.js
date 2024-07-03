@@ -21,7 +21,7 @@ export default function Home() {
     <main className={style.main}>
       {/* <h1 className="text-white">Skull</h1> */}
       <div className={style.page1}>
-        <div className="flex items-center justify-center flex-col font-bold text-4xl tablet:text-5xl laptop:text-6xl desktop:text-7xl">
+        <div className="flex items-center justify-center flex-col font-bold text-3xl tablet:text-5xl laptop:text-6xl desktop:text-7xl">
           <h1>
             {" "}
             <em>t</em> itas <em>g</em>hosh
