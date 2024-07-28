@@ -11,7 +11,8 @@ export default function Letter3D({fref}) {
   const group = useRef()
     const {scrollYProgress} = useScroll({
         target:fref,
-        offset:['start end', 'end start']
+        offset:['start end', 'end start'],
+        layoutEffect:false
     })
     
     const posY1 = useTransform(scrollYProgress,[0,1],[-100,700 ])
